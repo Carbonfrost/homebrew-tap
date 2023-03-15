@@ -5,20 +5,20 @@
 class Pastiche < Formula
   desc "Make requests to HTTP APIs using their OpenAPI schemas and definitions"
   homepage "https://github.com/Carbonfrost/pastiche"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Carbonfrost/pastiche/releases/download/v0.1.0/pastiche_0.1.0_darwin_x86_64.tar.gz"
-      sha256 "15ecbe83cbfa87fdebc54842b2e51cbcea685e080c1a71be6814fec1a075a47d"
+      url "https://github.com/Carbonfrost/pastiche/releases/download/v0.2.0/pastiche_0.2.0_darwin_x86_64.tar.gz"
+      sha256 "271dc24c3634c447edfec47dd0b5ed50748cc06010e92b9905862ac7a1b7fd0a"
 
       def install
         bin.install "pastiche"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Carbonfrost/pastiche/releases/download/v0.1.0/pastiche_0.1.0_darwin_arm64.tar.gz"
-      sha256 "e728bf6083658719d2b274e76fd249a2f3488e4fb496e18a91f468852e926de8"
+      url "https://github.com/Carbonfrost/pastiche/releases/download/v0.2.0/pastiche_0.2.0_darwin_arm64.tar.gz"
+      sha256 "5fbe3c822b6865adef67009b9602493d169b8478244c7dbb06df90760f52a357"
 
       def install
         bin.install "pastiche"
@@ -28,16 +28,16 @@ class Pastiche < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Carbonfrost/pastiche/releases/download/v0.1.0/pastiche_0.1.0_linux_arm64.tar.gz"
-      sha256 "706fabfdeae9a97fcbaad169ed41d6599210bca02bfc732c594ba1f37a1635f3"
+      url "https://github.com/Carbonfrost/pastiche/releases/download/v0.2.0/pastiche_0.2.0_linux_arm64.tar.gz"
+      sha256 "b81d39326b3a63a3064c4741f014dc07a987cf13045ea5d3c754fb3bcc03a403"
 
       def install
         bin.install "pastiche"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Carbonfrost/pastiche/releases/download/v0.1.0/pastiche_0.1.0_linux_x86_64.tar.gz"
-      sha256 "0a20d7e681f871e7e74e861b518790bcc3e0bd265d2a653be7c636d1b3808bff"
+      url "https://github.com/Carbonfrost/pastiche/releases/download/v0.2.0/pastiche_0.2.0_linux_x86_64.tar.gz"
+      sha256 "d6b6a9288a0f93a08d4dbffdebd6a7a1b4e427d09482a57742d1fa1a7addb4ed"
 
       def install
         bin.install "pastiche"
