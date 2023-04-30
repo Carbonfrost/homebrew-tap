@@ -5,20 +5,20 @@
 class Joe < Formula
   desc "Generate command lines based on Joe-cli"
   homepage "https://github.com/Carbonfrost/joe-cli"
-  version "0.5.0"
+  version "0.5.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.0/joe-cli_0.5.0_darwin_arm64.tar.gz"
-      sha256 "5c545afdda2c80bc44f518c2923a5b5670bb23117626ec8ca6b53194b72af7c8"
+    if Hardware::CPU.intel?
+      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.1/joe-cli_0.5.1_darwin_amd64.tar.gz"
+      sha256 "9abf353937ab81079e1d190ec27b67665d43e89817ae0c69e8c5431c21ada951"
 
       def install
         bin.install "joe"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.0/joe-cli_0.5.0_darwin_amd64.tar.gz"
-      sha256 "833a4089ea7077c9df08d5deed6004343fb8980f728884f0327e8138426c1236"
+    if Hardware::CPU.arm?
+      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.1/joe-cli_0.5.1_darwin_arm64.tar.gz"
+      sha256 "591f29e44cc8628e2b8a593bcba583974c058ca125a11aeeed75ea2e976ddda0"
 
       def install
         bin.install "joe"
@@ -28,16 +28,16 @@ class Joe < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.0/joe-cli_0.5.0_linux_arm64.tar.gz"
-      sha256 "fe2b1c474a2ba887eeca1f9299d50ebc2c9f942f0ca0d899416f2784689092f8"
+      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.1/joe-cli_0.5.1_linux_arm64.tar.gz"
+      sha256 "2a5aef8acff79b40e3e675fa075378684fa068b3110055fa7dbdebc7d67fbf57"
 
       def install
         bin.install "joe"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.0/joe-cli_0.5.0_linux_amd64.tar.gz"
-      sha256 "d1a53b977b9f02ba0c59a008a827423329cb61c8d9389cbbc1b3c8e60062509b"
+      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.1/joe-cli_0.5.1_linux_amd64.tar.gz"
+      sha256 "bc0813902eed349c0d9e32979b227d214e36e361c1416262938835b32810f587"
 
       def install
         bin.install "joe"
