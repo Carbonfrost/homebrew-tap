@@ -5,20 +5,20 @@
 class Joe < Formula
   desc "Generate command lines based on Joe-cli"
   homepage "https://github.com/Carbonfrost/joe-cli"
-  version "0.5.1"
+  version "0.5.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.1/joe-cli_0.5.1_darwin_amd64.tar.gz"
-      sha256 "9abf353937ab81079e1d190ec27b67665d43e89817ae0c69e8c5431c21ada951"
+      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.2/joe-cli_0.5.2_darwin_amd64.tar.gz"
+      sha256 "202f228b9f142f97177cebbc1844171c390e1dbfbac564d0dade045a1311e793"
 
       def install
         bin.install "joe"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.1/joe-cli_0.5.1_darwin_arm64.tar.gz"
-      sha256 "591f29e44cc8628e2b8a593bcba583974c058ca125a11aeeed75ea2e976ddda0"
+      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.2/joe-cli_0.5.2_darwin_arm64.tar.gz"
+      sha256 "f936421170438187e7970bddf3812349341db5be8b71a16358b26222cf887614"
 
       def install
         bin.install "joe"
@@ -28,16 +28,16 @@ class Joe < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.1/joe-cli_0.5.1_linux_arm64.tar.gz"
-      sha256 "2a5aef8acff79b40e3e675fa075378684fa068b3110055fa7dbdebc7d67fbf57"
+      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.2/joe-cli_0.5.2_linux_arm64.tar.gz"
+      sha256 "af7cac5f06451106a73c6ef97a27f9c2356d62ecb042aa5ed39f5b63c027d517"
 
       def install
         bin.install "joe"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.1/joe-cli_0.5.1_linux_amd64.tar.gz"
-      sha256 "bc0813902eed349c0d9e32979b227d214e36e361c1416262938835b32810f587"
+      url "https://github.com/Carbonfrost/joe-cli/releases/download/v0.5.2/joe-cli_0.5.2_linux_amd64.tar.gz"
+      sha256 "4ed929e2c6e334e8aedcbbee5661cd1f1c7650932fb01a281f22e4c329209640"
 
       def install
         bin.install "joe"
