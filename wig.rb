@@ -5,20 +5,20 @@
 class Wig < Formula
   desc "Provides access to the Go HTTP client with some cURL compatibility"
   homepage "https://github.com/Carbonfrost/joe-cli-http"
-  version "0.2.0"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.2.0/wig_0.2.0_darwin_x86_64.tar.gz"
-      sha256 "922bd7babedbe74f09a3fb789fd5533b4ebf14423f144350ac1177124ccb667f"
+      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.5.0/wig_0.5.0_darwin_amd64.tar.gz"
+      sha256 "6ff5703169fe697a81e8457c40b0304f94055caf08cdfb1d45375a1ea219ebce"
 
       def install
         bin.install "wig"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.2.0/wig_0.2.0_darwin_arm64.tar.gz"
-      sha256 "93dca930add7dec07dd1829fd214252b2709bfe1955360007734e252c8d9c9dc"
+      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.5.0/wig_0.5.0_darwin_arm64.tar.gz"
+      sha256 "8120772a5254e3d4b407b272acbed12f9dd80ef2c6120d97599608dd289717e2"
 
       def install
         bin.install "wig"
@@ -28,16 +28,16 @@ class Wig < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.2.0/wig_0.2.0_linux_x86_64.tar.gz"
-      sha256 "6b7ff2de0f7db9fc53b5395fb669d8c983bed18f7a333401170d8cc8123e8081"
+      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.5.0/wig_0.5.0_linux_amd64.tar.gz"
+      sha256 "a22f2aecc718f2384c995b995a1e81252bfa4d91abf4b095a0543b4144201b58"
 
       def install
         bin.install "wig"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.2.0/wig_0.2.0_linux_arm64.tar.gz"
-      sha256 "c2327a43904cabd826a61496fd15afe3e84a777bc09f0cbe81558207893cef2b"
+      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.5.0/wig_0.5.0_linux_arm64.tar.gz"
+      sha256 "2451b5b9f43c505c425735f7211848049f53d5e5f2c92c225989149b2465c459"
 
       def install
         bin.install "wig"
