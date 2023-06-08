@@ -5,20 +5,20 @@
 class Toupee < Formula
   desc "Expands RFC 6570 (level 4) URI templates"
   homepage "https://github.com/Carbonfrost/joe-cli-http"
-  version "0.2.0"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.2.0/toupee_0.2.0_darwin_x86_64.tar.gz"
-      sha256 "d22735d67c7fa4d79c5f2a9551ce8d47094badf982617a24983be6ade98e34be"
+      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.5.0/toupee_0.5.0_darwin_amd64.tar.gz"
+      sha256 "f30ea9d1e2f01c5dc07c7e6a2d97c778493ea12bbd055cad7aff263a8bf01506"
 
       def install
         bin.install "toupee"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.2.0/toupee_0.2.0_darwin_arm64.tar.gz"
-      sha256 "26a9db8e5bf6368513c85e0c93fa1b165d1417b729212bc07c53638248e50593"
+      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.5.0/toupee_0.5.0_darwin_arm64.tar.gz"
+      sha256 "30d41b198c5e8f2075462aecf6c3de3260d1bdde4884684beeb49ef159c1ffd9"
 
       def install
         bin.install "toupee"
@@ -27,17 +27,17 @@ class Toupee < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.2.0/toupee_0.2.0_linux_x86_64.tar.gz"
-      sha256 "b5f2f5f4af6164b1b18f9e6c2ebd777c324c0c9c626b4d4d5460d312317c6e8a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.5.0/toupee_0.5.0_linux_arm64.tar.gz"
+      sha256 "2261793ff369bd8912213192c3fd8b9330049d6560421da66c0d46e3de722edc"
 
       def install
         bin.install "toupee"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.2.0/toupee_0.2.0_linux_arm64.tar.gz"
-      sha256 "663d5bfc49885fc382210a177072b4cfc26ce23a0369b32897cea00e2a630893"
+    if Hardware::CPU.intel?
+      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.5.0/toupee_0.5.0_linux_amd64.tar.gz"
+      sha256 "17c147b96dc39a7ee32fc588d0098f65e25e35b8c24f4d545691cae2bdbceede"
 
       def install
         bin.install "toupee"
