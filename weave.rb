@@ -5,20 +5,20 @@
 class Weave < Formula
   desc "Provides access to a simple Go HTTP server for files and proxy handling"
   homepage "https://github.com/Carbonfrost/joe-cli-http"
-  version "0.2.0"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.2.0/weave_0.2.0_darwin_x86_64.tar.gz"
-      sha256 "647ef15c1a562160e6f19fb92ac411f8691b2f089117e61cf5c0332ef23dd20e"
+      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.5.0/weave_0.5.0_darwin_amd64.tar.gz"
+      sha256 "6d946ee0f8fae94c023db92490486db594812e56b74c5e317854601d5c26807c"
 
       def install
         bin.install "weave"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.2.0/weave_0.2.0_darwin_arm64.tar.gz"
-      sha256 "7d3c05da653131a93f54638f7a41f423169b65a14434198e7cecb9c34768bc21"
+      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.5.0/weave_0.5.0_darwin_arm64.tar.gz"
+      sha256 "2e5bba837a504cba8ae30316e50df655fef249ed92b8c9e9ae21e8a5fc0fc387"
 
       def install
         bin.install "weave"
@@ -28,16 +28,16 @@ class Weave < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.2.0/weave_0.2.0_linux_arm64.tar.gz"
-      sha256 "66fd3626fd2359d79517931b37d5c5845521ea27dc0587dd681397e7b7bc1070"
+      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.5.0/weave_0.5.0_linux_arm64.tar.gz"
+      sha256 "78277d42d51a06cfcb735da00b5c04a4842c239609a27e4c087be103bd27d093"
 
       def install
         bin.install "weave"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.2.0/weave_0.2.0_linux_x86_64.tar.gz"
-      sha256 "1dcc7bf486ddfcb4bc56959291f97868f35f45e09db6bd9ed690c823de70d963"
+      url "https://github.com/Carbonfrost/joe-cli-http/releases/download/v0.5.0/weave_0.5.0_linux_amd64.tar.gz"
+      sha256 "c6a52f6a46047bd9acd2136f4b092a3c87eb4ed8997aecfc4a2bc5bd692399fc"
 
       def install
         bin.install "weave"
